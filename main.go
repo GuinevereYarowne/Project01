@@ -990,7 +990,7 @@ func sortResultsByMatchRate(results []*SearchResult) {
 
 // 搜索接口
 func searchHandler(w http.ResponseWriter, r *http.Request) {
-	// 🔧 添加panic恢复：防止单个查询导致整个服务器崩溃
+	//  添加panic恢复：防止单个查询导致整个服务器崩溃
 	defer func() {
 		if err := recover(); err != nil {
 			fmt.Printf("❌ 查询处理异常: %v\n", err)
